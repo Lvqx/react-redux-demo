@@ -6,7 +6,8 @@ class Preview extends Component {
     static propTypes = {
         title: PropTypes.string,
         link: PropTypes.string,
-        push: PropTypes.func
+        push: PropTypes.func,
+        description: PropTypes.string
     }
 
     handleNavigate(id, e) {
@@ -21,7 +22,8 @@ class Preview extends Component {
         return (
             <article className="article-preview-item">
                 <h1 className="title">
-                    <a href={`/detail/${this.props.id}`} onClick={this.handleNavigate.bind(this,this.props.id)}>
+                    <a href={`/detail/${this.props.id}`}
+                       onClick={this.handleNavigate.bind(this,this.props.id)}>
                         {this.props.title}
                     </a>
                 </h1>
